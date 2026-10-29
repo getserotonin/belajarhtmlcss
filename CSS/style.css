@@ -1,0 +1,278 @@
+
+
+/* 1. VARIABEL GLOBAL & warna dasar*/
+
+/* :root ibarat "palet cat" tempat kita menyimpan warna agar tidak perlu menghafal kodenya */
+:root {
+    --primary-color: #4f46e5; /* Biru keunguan untuk tombol utama */
+    --bg-color: #f9fafb;      /* Warna abu-abu sangat terang untuk latar belakang web */
+    --card-bg: #ffffff;       /* Putih bersih untuk warna kotak/kartu */
+    --text-color: #1f2937;    /* Abu-abu gelap untuk teks agar tidak terlalu mencolok seperti hitam pekat */
+    --transition: all 0.3s ease; /* Kecepatan animasi saat tombol disentuh (0.3 detik) */
+}
+
+/* Tanda bintang (*) artinya "Pilih Semua Elemen" */
+* { 
+    margin: 0; padding: 0;   /* Hapus semua jarak spasi bawaan dari komputer */
+    box-sizing: border-box;  /* Jaga ukuran kotak agar tidak membengkak saat diisi teks */
+    font-family: sans-serif; /* Gunakan jenis huruf yang rapi dan modern */
+}
+
+/* Mengatur gaya dasar untuk seluruh halaman web */
+body { 
+    background-color: var(--bg-color); /* Ambil warna latar dari palet di atas */
+    color: var(--text-color);          /* Ambil warna teks dari palet di atas */
+    line-height: 1.6;                  /* Beri jarak antar baris teks agar enak dibaca */
+}
+
+/* .container adalah wadah agar isi web tidak melebar sampai menabrak ujung kiri-kanan layar */
+.container { 
+    width: 90%; max-width: 1100px; /* Lebar maksimal wadah adalah 1100 pixel */
+    margin: 0 auto; padding: 40px 0; /* 'margin: 0 auto' adalah mantra agar wadah berada tepat di tengah layar */
+}
+
+/* Memberi warna khusus untuk teks yang ingin ditonjolkan */
+.highlight { color: var(--primary-color); }
+
+/* ============================================== */
+/* 2. KOMPONEN TOMBOL (.btn)                      */
+/* ============================================== */
+
+/* Bentuk dasar dari semua tombol */
+.btn { 
+    display: inline-block;
+    padding: 10px 20px;       /* Jarak ruang di dalam tombol (atas-bawah 10px, kiri-kanan 20px) */
+    text-decoration: none;    /* Hilangkan garis bawah pada teks link */
+    border-radius: 8px;       /* Tumpulkan ujung kotak agar sedikit melengkung */
+    cursor: pointer;          /* Ubah ikon panah mouse menjadi gambar tangan */
+    border: none;             /* Hilangkan garis pinggir tombol */
+}
+  
+/* Mewarnai tombol menggunakan warna utama dari palet */
+.btn-primary { 
+    background-color: var(--primary-color); 
+    color: white; 
+}
+
+/* ============================================== */
+/* 3. NAVBAR (Menu Navigasi Atas)                 */
+/* ============================================== */
+
+/* Kotak menu paling atas */
+.navbar { 
+    position: sticky; top: 0; /* Tempelkan menu ini di pucuk layar (0) saat halaman digeser ke bawah */
+    background: white; 
+    padding: 15px 0; 
+    border-bottom: 1px solid #ddd; /* Beri garis tipis di bagian bawah menu */
+    z-index: 1000; /* Pastikan menu selalu di lapisan paling atas, tidak tertimpa gambar lain */
+}
+
+/* Flexbox: Teknologi untuk menjejerkan elemen secara horizontal (kiri-kanan) */
+.nav-container { 
+    display: flex; justify-content: space-between; /* Dorong logo ke ujung kiri, dan menu ke ujung kanan */
+    align-items: center; padding: 0; /* Pastikan posisinya rata tengah secara vertikal */
+}
+
+.logo { 
+    font-size: 1.5rem; font-weight: bold; 
+    text-decoration: none; color: black; 
+}
+
+/* Wadah untuk daftar link menu */
+.nav-links { 
+    display: flex; align-items: center; gap: 20px; /* Beri jarak (gap) 20px antar menu */
+    list-style: none; /* Hilangkan titik-titik list bawaan HTML */
+}
+
+.nav-links a { text-decoration: none; color: #555; }
+
+/* Khusus link yang menjadi tombol "Contact Me" */
+.nav-links a.nav-btn { color: white; font-weight: bold; }
+
+/* Sembunyikan ikon garis tiga (burger) saat web dibuka di laptop/komputer besar */
+.hamburger { 
+    display: none; font-size: 1.5rem; cursor: pointer; 
+}
+
+/* ============================================== */
+/* 4. HERO SECTION (Area Sambutan/Halaman Depan)  */
+/* ============================================== */
+
+/* Membagi area depan menjadi 2 kolom (Kiri Teks, Kanan Gambar) */
+.hero-container { 
+    display: flex; justify-content: space-between; 
+    align-items: center; gap: 40px; 
+}
+
+/* Ukuran teks sambutan */
+.hero-content h1 { font-size: 2.8rem; margin: 10px 0; }
+.hero-content h2 { font-size: 1.2rem; color: #555; margin-bottom: 10px; }
+.hero-content p { margin-bottom: 20px; }
+
+/* Menghias Foto Profil */
+.hero-image img { 
+    width: 250px; height: 250px; 
+    border-radius: 50%; /* Potong foto menjadi lingkaran sempurna */
+    object-fit: cover;  /* Jaga agar foto tidak peyang/distorsi */
+    border: 5px solid white; /* Bingkai putih tebal */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Bayangan lembut di belakang foto */
+}
+
+/* ============================================== */
+/* 5. EXPERIENCE (Garis Waktu / Timeline Jejak)   */
+/* ============================================== */
+.section-title { text-align: center; margin-bottom: 40px; }
+.section-title p { color: #555; margin-top: 5px; }
+
+/* Garis lurus memanjang ke bawah di sebelah kiri */
+.timeline { 
+    position: relative; max-width: 800px; 
+    margin: 0 auto; padding-left: 30px; 
+    border-left: 3px solid var(--primary-color); /* Ini adalah garis utamanya */
+}
+
+.timeline-item { position: relative; margin-bottom: 30px; }
+
+/* Titik-titik bulatan di atas garis waktu */
+.timeline-dot { 
+    position: absolute; left: -40px; top: 0; /* Tarik titik ini ke kiri agar pas menimpa garis utama */
+    width: 18px; height: 18px; 
+    background-color: white; 
+    border: 4px solid var(--primary-color); border-radius: 50%; 
+}
+
+/* Kotak isi pengalaman */
+.timeline-content { 
+    background-color: var(--card-bg); padding: 20px; 
+    border-radius: 12px; border: 1px solid #ddd; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    transition: var(--transition); 
+}
+
+/* Saat kotak pengalaman disentuh mouse, angkat sedikit ke atas */
+.timeline-content:hover { 
+    transform: translateY(-3px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); 
+}
+
+/* Label tanggal dengan latar belakang warna biru muda */
+.timeline-date { 
+    display: inline-block; background-color: #e0e7ff; 
+    color: var(--primary-color); padding: 4px 12px; 
+    border-radius: 20px; font-size: 0.85rem; 
+    font-weight: bold; margin-bottom: 10px; 
+}
+
+.timeline-content h3 { font-size: 1.2rem; color: var(--text-color); margin-bottom: 5px; }
+.timeline-content h4 { font-size: 0.95rem; color: #666; margin-bottom: 10px; font-weight: normal; }
+
+/* ============================================== */
+/* 6. GRID KARTU (Kotak-kotak Skills & Funding)      */
+/* ============================================== */
+
+/* Sistem canggih penyusun kotak otomatis */
+.skills-grid, .funding-grid {
+    display: grid; 
+    /* Baris ini menyuruh komputer: "Buat kolom sebanyak mungkin yang muat, minimal lebarnya 250px!" */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px; margin-top: 20px;
+}
+
+/* Desain bentuk kartunya */
+.skill-card, .funding-card {
+    background-color: var(--card-bg); padding: 20px; 
+    border-radius: 12px; border: 1px solid #ddd; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    transition: var(--transition); 
+}
+
+/* Efek melayang saat kartu disentuh mouse */
+.skill-card:hover, .funding-card:hover {
+    transform: translateY(-5px); /* Geser posisinya 5 pixel ke arah atas */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Pertebal bayangannya */
+}
+
+/* 1. Mengatur wadah kartu agar dinamis (berjejer ke samping di PC, ke bawah di HP) */
+.funding-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Jarak antar kartu */
+    margin-top: 40px;
+}
+
+/* 2. Mengatur desain bentuk "Kartu" */
+.funding-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* Bayangan lembut untuk kartu */
+    display: flex;
+    flex-direction: column; 
+    transition: transform 0.3s ease; /* Transisi untuk efek hover nanti */
+}
+
+/* 3. Menjaga gambar tetap landscape di dalam kartu */
+.funding-title-image {
+    width: 100%;
+    height: 200px; /* Ukuran landscape */
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* 4. Mendorong tombol agar selalu rata di bagian bawah kartu */
+.funding-card .card-buttons {
+    margin-top: auto; 
+    padding-top: 15px;
+}
+/* ============================================== */
+/* 7. FORM KONTAK (Kotak Kirim Pesan)             */
+/* ============================================== */
+
+/* Wadah luar untuk formulir */
+.contact-box { 
+    max-width: 500px; margin: 0 auto; 
+    background: white; padding: 30px; border-radius: 12px; 
+}
+
+/* Kolom isian teks */
+input, textarea { 
+    width: 100%; /* Paksa kotak isian untuk membentang penuh dari kiri ke kanan */
+    padding: 12px; margin-bottom: 15px; 
+    border: 1px solid #ddd; border-radius: 6px; 
+}
+
+/* ============================================== */
+/* 8. MODE HP / RESPONSIF (Layar Maksimal 768px)  */
+/* ============================================== */
+
+/* Semua kode di dalam @media ini HANYA JALAN jika layar seukuran HP atau Tablet */
+@media (max-width: 768px) {
+    
+    /* Munculkan kembali tombol garis tiga (burger) */
+    .hamburger { display: block; }
+    
+    /* Ubah daftar menu yang tadinya menyamping jadi menumpuk ke bawah (dropdown) */
+    .nav-links {
+        position: absolute; top: 100%; left: 0; width: 100%;
+        background: white; flex-direction: column; /* Bariskan secara vertikal/kolom */
+        text-align: center; padding: 20px 0; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        
+        /* Trik menyembunyikan menu tanpa menghilangkan elemennya dari HTML */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.3s ease-in-out;
+    }
+
+    /* Saat tombol ditekan, JavaScript akan memanggil class ini untuk membuka menu */
+    .nav-links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* Karena layar HP sempit, teks dan gambar sambutan harus ditumpuk Atas-Bawah */
+    .hero-container {
+        flex-direction: column-reverse; /* column-reverse = gambar jadi di atas, teks di bawah */
+        text-align: center; /* Rata tengahkan teks */
+    }
+    
+    .hero-buttons { margin-top: 20px; }
+}

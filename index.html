@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Pengaturan dasar dokumen web -->
+    <meta charset="UTF-8">
+    
+    <!-- Pengaturan layar agar web tidak terpotong saat dibuka di HP (Responsif) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Judul yang akan muncul di tab atas browser pengunjung -->
+    <title>CV Halmahera kelas 9</title>
+    
+    <!-- Mengambil koleksi ikon gratis dari internet (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Menghubungkan kerangka HTML ini dengan file desain CSS kita -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>  
+
+    <!-- ============================================== -->
+    <!-- NAVBAR: Bagian menu navigasi di atas web -->
+    <!-- ============================================== -->
+    <nav class="navbar">     
+        <div class="container nav-container">
+            <!-- Teks logo yang jika diklik akan kembali ke atas (#) -->
+            <a href="#" class="logo">Portfolio<span>.</span></a>
+            
+            <!-- Ikon garis tiga (burger) yang hanya muncul di layar HP -->
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+
+            <!-- Daftar link menu (About, Experience, Contact) -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <!-- Tombol khusus untuk menu Contact me -->
+                <li><a href="#contact" class="btn btn-primary nav-btn">Contact me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================== -->
+    <!-- HERO SECTION: Bagian penyambutan (paling atas) -->
+    <!-- ============================================== -->
+    <section class="hero" id="about">
+        <div class="container hero-container">
+            
+            <!-- Kolom Teks Sambutan -->
+            <div class="hero-content">
+                <span class="badge">Selamat datang</span>
+                <h1>Halo, saya Halmahera</h1>
+                <h2>Siswa kelas 9 di SMPS Alam Purwakarta</h2>
+                <p>Saya senang mempelajari hal baru dan terus berkembang.</p>
+                <div class="hero-buttons">
+                    <!-- Tombol yang mengarah ke bagian project -->
+                    <a href="#projects" class="btn btn-primary">Project terdekat</a>
+                </div>
+            </div> 
+            
+            <!-- Kolom Foto Profil -->
+            <div class="hero-image">
+                <!-- Ganti link src ini dengan link foto aslimu nanti -->
+                <img src="assets/fotofachri.png" alt="profile">
+            </div>
+            
+        </div>
+    </section>
+
+   
+    <!-- EXPERIENCE SECTION: Pengalaman / Kegiatan   -->
+   
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span class="highlight">Experience</span></h2>
+                <p>Jejak langkah dan pengalaman belajar saya di luar kelas.</p>
+            </div>
+            
+            <div class="timeline">
+                <!-- Pengalaman 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">April 2026</span>
+                        <h3>Kolaborasi Bersih-bersih Alam</h3>
+                        <h4>Tangkuban Parahu</h4>
+                        <p>Mengikuti kegiatan kolaborasi pelestarian lingkungan melalui aksi bersih-bersih, sekaligus mempelajari sejarah destinasi wisata alam secara langsung.</p>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">November 2025</span>
+                        <h3>Magang Industri Kreatif & Live-in</h3>
+                        <h4>Jatiluhur</h4>
+                        <p>Mengasah keterampilan dan kemandirian dengan terjun langsung mempelajari industri kreatif, serta berbaur melalui kegiatan live-in bersama masyarakat setempat.</p>
+                    </div>
+                </div>
+
+                <!-- Pengalaman 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Oktober 2025</span>
+                        <h3>Proyek Urban Survival</h3>
+                        <h4>Jakarta</h4>
+                        <p>Berlatih problem-solving, kerja sama tim, dan adaptasi di lingkungan perkotaan yang padat, mengandalkan navigasi dan kemandirian finansial dasar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION: Bagian memajang keahlian -->
+   
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>My <span class="highlight">Skills</span></h2>
+            
+            <!-- Wadah (Grid) untuk menata kartu-kartu keahlian agar rapi -->
+            <div class="skills-grid">
+                <!-- Kartu keahlian 1 -->
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>Web Structure & Design</p>
+                </div>
+                <!-- Kartu keahlian 2 -->
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Web Interactivity</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+  
+    <!-- Funding SECTION: Bagian poster dan link pendaftaran event berbayar -->
+  
+    <section class="funding" id="funding">
+        <div class="container">
+            <h2>Fundraising <span class="highlight">Expedition</span></h2>
+            <div class="funding-grid">
+              
+                <div class="funding-card">
+                    <h3>Jalan-jalan Purwakarta</h3>
+                     <div class="funding-image-grid">
+                <!-- Ganti link src ini dengan link foto acara -->
+                <img src="assets/contoh flyer.jpg" alt="funding" class="funding-title-image">
+                     </div>
+                    <p>Mengelilingi Perpustakaan dan Museum Diorama di Purwakarta Kota.</p>
+                            <div class="hero-buttons">
+                            <!-- Tombol yang mengarah ke bagian project -->
+                            <a href="#projects" class="btn btn-primary">Daftar Sekarang</a>
+                        </div>
+                  </div> 
+
+                   <div class="funding-card">
+                    <h3>Jalan-jalan Purwakarta</h3>
+                     <div class="funding-image-grid">
+                <!-- Ganti link src ini dengan link foto acara -->
+                <img src="assets/contoh flyer.jpg" alt="funding" class="funding-title-image">
+                     </div>
+
+                    <p>Mengelilingi Perpustakaan dan Museum Diorama di Purwakarta Kota.</p>
+                            <div class="hero-buttons">
+                            <!-- Tombol yang mengarah ke bagian project -->
+                            <a href="#projects" class="btn btn-primary">Daftar Sekarang</a>
+                        </div>
+                  </div> 
+
+                   <div class="funding-card">
+                    <h3>Jalan-jalan Purwakarta</h3>
+                     <div class="funding-image-grid">
+                <!-- Ganti link src ini dengan link foto acara -->
+                <img src="assets/contoh flyer.jpg" alt="funding" class="funding-title-image">
+                     </div>
+
+                    <p>Mengelilingi Perpustakaan dan Museum Diorama di Purwakarta Kota.</p>
+                            <div class="hero-buttons">
+                            <!-- Tombol yang mengarah ke bagian project -->
+                            <a href="#projects" class="btn btn-primary">Daftar Sekarang</a>
+                        </div>
+                  </div> 
+
+                  
+                </div>
+            </div>
+
+    </section>
+
+
+    <!-- FOOTER: Bagian kaki web paling bawah -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Halmahera. Built with ❤️ by Fachri.</p>
+        </div>
+    </footer>
+
+    <!-- Script JS wajib dipanggil di bagian PALING BAWAH sebelum </body> -->
+    <!-- Tujuannya agar kerangka HTML selesai dibangun dulu, baru otaknya (JS) dijalankan -->
+    <script src="script.js"></script>
+</body>
+</html>
